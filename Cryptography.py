@@ -4,6 +4,7 @@ class runStringChange:
     ## Transposition
     #polygraphic
     ##Permutation
+    #this is a comment
     def __init__(self):
 #         decoder = input('decoder')
 #         encoder = input('encoder')
