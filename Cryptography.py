@@ -19,7 +19,6 @@ class runStringChange:
         alphabet = list(alphabet)
         for i in range(len(string)):
             letter = string[i]
-            if (letter.isupper()):
                 newString = newString + chr((ord(letter) + num-65) % 26 +65)
             else:
                 newString = newString + chr((ord(letter) + num-97) % 26 +97)
