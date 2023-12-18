@@ -17,10 +17,10 @@ class crypto:
                 n = int(s)
                 break
             except ValueError:
-                print("Input: " + s + " is not a number\n")
+                print(f"Input: {s} is not a number\n")
         return n
     def testStr(self,string):
-        '''Runs a test to make sure that the input does not contain an integer
+        '''Runs a test to make sure that the input string does not contain an integer
         input is a string'''
         listNum = [0,1,2,3,4,5,6,7,8,9]
         e = True
@@ -28,7 +28,7 @@ class crypto:
             s = input(string)
             for letter in s:
                 if letter in listNum:
-                    print('Input ' + s +  ' contains a number\n')
+                    print(f'Input {s} contains a number, should only contain letters\n')
                 else:
                     continue
             return s
@@ -65,25 +65,25 @@ class crypto:
         string = input('Give a string\n')
         num = int(input('Input Cipher Encoding key (1-26)\n'))
         newString = ""
-        print('Your input was ' + string + ' .')
+        print(f'Your input was {string} .')
         string = string.replace(" ", "")
         string = string.upper()
         for i in range(len(string)):
             letter = string[i]
             newString = newString + chr((ord(letter) + num-65) % 26 +65)
            
-        print('Your output was '+ newString + ' .')
+        print(f'Your output was {newString} .')
     def substitutionDecode(self):
         stringEncrypt = self.testStr('Provide the encyrypted string\n')
         num = self.testInt('Input Cipher Encoding key (1-26)\n')
         newString = ""
-        print('The inputed string was '+ stringEncrypt + ' .')
+        print(f'The inputed string was {stringEncrypt} .')
         stringEncrypt = stringEncrypt.replace(" ", "")
         stringEncrypt = stringEncrypt.upper()
         for i in range(len(stringEncrypt)):
             letter = stringEncrypt[i]
             newString = newString + chr((ord(letter) - num-65) % 26 + 65)
-        print('Your output was ' + newString + ' .')
+        print(f'Your output was {newString} .')
 
 
     
